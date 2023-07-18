@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  pub_server:
+    container_name: pub_sevrer
+    restart: unless-stopped
+    volumes:
+      # 包存放地址，修改成你的地址，
+      - $HOME/package-db:/root/flutter-outputs/package-db
+    build: ./
+    ports:
+      - 8081:8080
