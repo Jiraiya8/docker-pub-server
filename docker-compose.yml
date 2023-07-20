@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     volumes:
       # 包存放地址，修改成你的地址，
-      - $HOME/package-db:/root/flutter-outputs/package-db
+      - $HOME/package-db:/root/package-db
     build: ./
     ports:
       - 8081:8080
